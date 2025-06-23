@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBTC_sign_up/register</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--part 2-->
+     <div class="sign-container">
+        <div class="sign-title">
+            <h2>REGISTER PAGE </h2>
+        </div>
+       <div class="box-transparent">
+            <p class="text-transparent">SIGN UP</p>
+        </div>
+
+        <div class="sign-form-wrapper">
+            <div class="sign-img-wrapper">
+            <img src="sign-doc/background1.png" alt="sign in background">
+            </div>
+
+            <div class="form-wrapper">
+            <form action="" class="register-form">
+                <h3>Sign up to Join <span> PBTC</span></h3>
+
+                <div aria-live="polite" class="form-messages"></div> <!-- <-- Add here for screen readers-->
+                
+                <div class="input-margin">
+                <div class="input-wrapper">
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                    <img src="sign-doc/Message.svg" alt="message icon" class="icon-left">
+                </div>
+
+                 <div class="input-wrapper">
+                    <input type="text" name="email" placeholder="Email" required>
+                    <img src="sign-doc/Message.svg" alt="message icon" class="icon-left">
+                </div>
+
+                 
+                <div class="input-wrapper">
+                    <input type="password" id="register-password" name="password" placeholder="Password">
+                    <img src="sign-doc/Lock.svg" alt="Lock icon" class="icon-left">
+                    <img src="sign-doc/Hide.svg" alt="Hide password" class="icon-right toggle-password" data-target="register-password">
+                </div>
+
+                 <div class="input-wrapper">
+                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm Password">
+                    <img src="sign-doc/Lock.svg" alt="Lock icon" class="icon-left">
+                    <img src="sign-doc/Hide.svg" alt="Hide password" class="icon-right toggle-password" data-target="confirm-password">
+                </div>
+
+                </div>
+
+                <div class="checkbox-container">
+                <div class="checkbox-wrapper"><input type="checkbox" id="faith" checked > <label for="faith">I agree to the <span>Statement of Faith Agreement</span></label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="purity" checked ><label for="purity">I have confirmed the <span>Sexual Purity Agreement</span></label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="agreement" checked ><label for="agreement">I have confirm the <span>Non-Disclosure Agreement</span></label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="terms" required><label for="terms">I have read the <span>Terms and Conditions</span></label></div>
+                </div>
+
+                 <div class="sign-icon-wrapper">
+                <button type="submit" class="sign-btn">Sign up</button>
+                
+                <div class="rule-wrapper">
+                <hr><p>Or sign in with</p><hr>
+                </div>
+
+                <div class="sign-icon">
+                    <div><a href="#"><img src="sign-doc/apple.svg" alt="apple brand icon" class="icon-margin"class="icon-margin"></a></div>
+                    <div><a href="#"><img src="sign-doc/google.svg" alt="google icon" class="icon-margin"></a></div>
+                   <div><a href="#"> <img src="sign-doc/facebook.svg" alt="facebook icon"class="last-img"></a></div>
+                </div>
+
+                <p class="last-text">Already have an account? <a href="sign_in.html" target="_blank">Sign in</a></p>
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBTC_sign_in</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sign-container">
+        <div class="sign-title">
+            <h2>SIGN IN PAGE</h2>
+        </div>
+        <div class="box-transparent">
+            <p class="text-transparent">SIGN IN</p>
+        </div>
+
+        <div class="sign-form-wrapper">
+            <div class="sign-img-wrapper">
+            <img src="sign-doc/background1.png" alt="sign in background">
+            </div>
+
+            <div class="form-wrapper">
+            <form action="" class="sign-in-form ">
+                <h3>Welcome back</h3>
+
+                <div aria-live="polite" class="form-messages"></div> <!-- <-- Add here for screen readers-->
+
+                <div class="input-margin">
+                <div class="input-wrapper">
+                    <input  type="email" name="email" placeholder="Email" autocomplete="email">
+                    <img src="sign-doc/Message.svg" alt="message icon" class="icon-left">
+                </div>
+
+                
+
+                  <div class="input-wrapper">
+                   <input type="password" name="password" id="signin-password" placeholder="Password">
+                    <img src="sign-doc/Lock.svg" alt="Lock icon" class="icon-left">
+                    <img src="sign-doc/Hide.svg" class="icon-right toggle-password" data-target="signin-password" alt="Lock password" >
+                </div>
+
+                </div>
+
+                <div class="sign-icon-wrapper">
+                    <button type="submit" class="sign-btn">Sign in</button>
+                <p><a href="#">Forgot Password?</a></p>
+                <div class="rule-wrapper">
+                <hr><p>Or sign in with</p><hr>
+                </div>
+                <div class="sign-icon">
+                    <div><a href="#"><img src="sign-doc/apple.svg" alt="apple brand icon"class="icon-margin"></a></div>
+                    <div><a href="#"><img src="sign-doc/google.svg" alt="google icon" class="icon-margin"></a></div>
+                   <div><a href="#"> <img src="sign-doc/facebook.svg" alt="facebook icon" class="last-img"></a></div>
+                </div>
+
+                <p class="last-text">Don't have an account? <a href="register.html" target="_blank">Sign up</a></p>
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+
+</body>
+</html>
