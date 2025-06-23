@@ -36,7 +36,7 @@ It currently includes three pages: landing, sign-in, and registration — with r
 - `index.js` – Handles landing page UI interactions including:  
   - Sticky navbar with scroll effect  
   - Mobile hamburger menu toggle  
-  - Product card slider with dot navigation  
+  - testimonial card slider with dot navigation  
 - `main.js` – Controls sign-in and registration form functionality:  
   - Input validation for email formats and password matching  
   - Inline error messaging and success feedback  
@@ -53,7 +53,7 @@ It currently includes three pages: landing, sign-in, and registration — with r
 
 - Sticky navigation bar that changes style on scroll for better user feedback  
 - Mobile-friendly hamburger menu for responsive navigation  
-- Interactive product card slider controlled via clickable dots  
+- Interactive testimonial card slider controlled via clickable dots  
 - Clean and semantic markup focused on accessibility and SEO best practices  
 
 ### Sign-In Page (`sign_in.html`)

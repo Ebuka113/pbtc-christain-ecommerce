@@ -1,59 +1,61 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // adding scrolled class to window height scroll
+  const nav = document.querySelector("nav");
+  const mobileNav = document.querySelector("nav.mobile-nav");
+  const menuIcon = document.querySelector(".menu-icon");
+  const closeIcon = document.querySelector(".mobile-menu-container .close-icon");
+  const mobileMenuContainer = document.querySelector(".mobile-menu-container");
 
-// adding scrolled class to window height scroll
-const nav = document.querySelector("nav");
-const mobileNav = document.querySelector("nav.mobile-nav");
-const menuIcon = document.querySelector(".menu-icon");
-const closeIcon = document.querySelector(".mobile-menu-container .close-icon");
-const mobileMenuContainer = document.querySelector(".mobile-menu-container");
-
-window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", () => {
     if (window.pageYOffset > 60) {
-        nav.classList.add("scrolled");
-        mobileNav.classList.add("scrolled")
+      nav?.classList.add("scrolled");
+      mobileNav?.classList.add("scrolled");
     } else {
-        nav.classList.remove("scrolled");
-        mobileNav.classList.remove("scrolled")
+      nav?.classList.remove("scrolled");
+      mobileNav?.classList.remove("scrolled");
     }
-});// end adding scrolled class to window height scroll
+  });
 
-menuIcon.addEventListener("click", () => {
-  mobileMenuContainer.classList.add("active")
-});
+  menuIcon?.addEventListener("click", () => {
+    mobileMenuContainer?.classList.add("active");
+  });
 
-closeIcon.addEventListener("click", () => {
-  mobileMenuContainer.classList.remove("active")
-});
+  closeIcon?.addEventListener("click", () => {
+    mobileMenuContainer?.classList.remove("active");
+  });
 
-//start of slider
-// Get references to the slider and indicator elements
+ // Start of slider
 const slider = document.getElementById('slider-wrapper2');
 const dots = document.querySelectorAll('.dot');
-
-// Track the current slide (starts at 0)
 let currentSlide = 0;
 
-// Go to a specific slide when a dot is clicked
 function goToSlide(slideIndex) {
   currentSlide = slideIndex;
 
-// Calculate how much to move the slider (100% per card)
-  const cardWidth = slider.querySelector('.card-info2').offsetWidth;
+  const card = slider?.querySelector('.card-info2');
+  const cardWidth = card?.offsetWidth || 0;
   const scrollAmount = cardWidth * slideIndex;
 
-  // Slide the wrapper to show the chosen card
-  slider.style.transform = `translateX(-${scrollAmount}px)`;
+  if (slider) {
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+  }
 
-  // Update which dot is active
   dots.forEach((dot, index) => {
     dot.classList.toggle('active', index === slideIndex);
   });
-}//end of slider
+}
+goToSlide(0);
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    goToSlide(index);
+  });
+});
 
   const signInForm = document.querySelector(".sign-in-form");
   const registerForm = document.querySelector(".register-form");
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  // Utility: Show error near input
   function showError(input, message) {
     let error = input.parentElement.querySelector(".error-message");
     if (!error) {
@@ -69,7 +71,6 @@ function goToSlide(slideIndex) {
     input.setAttribute("aria-describedby", error.id || "error-" + Math.random().toString(36).slice(2, 8));
   }
 
-  // Utility: Clear error
   function clearError(input) {
     const error = input.parentElement.querySelector(".error-message");
     if (error) error.textContent = "";
@@ -77,7 +78,6 @@ function goToSlide(slideIndex) {
     input.removeAttribute("aria-describedby");
   }
 
-  // Save email for future login
   function saveEmail(email) {
     let emails = JSON.parse(localStorage.getItem("userEmails") || "[]");
     if (!emails.includes(email)) {
@@ -86,13 +86,11 @@ function goToSlide(slideIndex) {
     }
   }
 
-  // Check if email exists
   function isEmailRegistered(email) {
     const emails = JSON.parse(localStorage.getItem("userEmails") || "[]");
     return emails.includes(email);
   }
 
-  // Generic form validator
   function validateForm(inputs) {
     let isValid = true;
     let firstInvalid = null;
@@ -121,7 +119,6 @@ function goToSlide(slideIndex) {
     return isValid;
   }
 
-  // Password toggler
   function setupToggleButtons() {
     document.querySelectorAll(".toggle-password").forEach(btn => {
       const targetId = btn.dataset.target;
@@ -240,10 +237,8 @@ function goToSlide(slideIndex) {
     });
   }
 
-  // Add password togglers
   setupToggleButtons();
 
-  // Show success message
   function showSuccessMessage(form, message) {
     let successMsg = form.querySelector(".success-message");
     if (!successMsg) {
@@ -256,4 +251,5 @@ function goToSlide(slideIndex) {
     }
     successMsg.textContent = message;
     successMsg.style.display = "block";
-  };
+  }
+});
